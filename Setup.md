@@ -31,6 +31,10 @@ Just enable the VNC server from the _raspi-config_.
 You'll need [Docker](https://www.docker.com/). Just follow one of the many installation manuals for the Raspberry like [this one](https://phoenixnap.com/kb/docker-on-raspberry-pi).
 
 ## Home Assistant (supervised)
-The _supervised_ installation guide can be found [here](https://github.com/home-assistant/supervised-installer).
+"Supervised" means that most of your installation is managed and supervised afterwards. You'll only have to maintain your OS. 
+The installation guide for this variant can be found [here](https://github.com/home-assistant/supervised-installer).
 
-⚠️ Over the "best" terminal _iterm_ I have not been able to get the graphical "machine type chooser" - so it's recommended to run the installation up to this point directly on the machine (e.g. via VNC). 
+⚠️ Over the "best" terminal app _iterm_ I have not been able to get the graphical machine type chooser - so it's recommended to run the installation up to this point directly on the machine (e.g. via VNC).
+
+### Home Assistant Community Store (HACS) 
+For many not-absolute-standard integrations you will need the **[Home Assistant Community Store (HACS)](https://hacs.xyz/)**.
