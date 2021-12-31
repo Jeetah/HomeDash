@@ -38,3 +38,8 @@ The installation guide for this variant can be found [here](https://github.com/h
 
 ### Home Assistant Community Store (HACS) 
 For many not-absolute-standard integrations you will need the **[Home Assistant Community Store (HACS)](https://hacs.xyz/)**.
+
+### App Armor
+The Home Assistant system settings will report that [App Armor](https://www.apparmor.net/) is missing for full security. This is true if using normal Raspberyy OS cause the makers decided against it due to perfromance impacts.
+The only way to use it for max security is to cross-compile the kernel - more details can be found [here](https://we.riseup.net/wikis/300095).
+Since my installation is not exposed outside the home network I decided against this. If anyone has some experience with it - please report back. 
