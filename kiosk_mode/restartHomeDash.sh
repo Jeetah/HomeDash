@@ -1,3 +1,4 @@
 #!/bin/bash
-set -ex
+# set -euo pipefail
+
 sudo systemctl restart homedash.service

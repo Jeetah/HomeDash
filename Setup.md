@@ -1,6 +1,17 @@
 # Setup
 
-**ℹ️  [Here's a comparison of the different Home Assistant OS installation variants](https://www.home-assistant.io/installation/#compare-installation-methods)**
+  * [Installation Variants](#installation-variants)
+  * [Raspberry](#raspberry)
+    + [Using a SSD instead SD card](#using-a-ssd-instead-sd-card)
+    + [VNC](#vnc)
+    + [Docker](#docker)
+  * [Home Assistant (supervised)](#home-assistant--supervised-)
+    + [Home Assistant Community Store (HACS)](#home-assistant-community-store--hacs-)
+    + [App Armor](#app-armor)
+  * [Kiosk Mode](#kiosk-mode)
+
+## Installation Variants
+**ℹ️  [Here's a comparison of the different Home Assistant installation variants](https://www.home-assistant.io/installation/#compare-installation-methods)**
 
 ⚠️ The _Home Assistant OS_ is recommended for the more unexperienced users with the drawback that you are no longer in full control of the system.
 So the clear recommendation is to use the _supervised variant_ (which can btw also be installed after fiddling around with the _container variant_) 
@@ -40,6 +51,35 @@ The installation guide for this variant can be found [here](https://github.com/h
 For many not-absolute-standard integrations you will need the **[Home Assistant Community Store (HACS)](https://hacs.xyz/)**.
 
 ### App Armor
-The Home Assistant system settings will report that [App Armor](https://www.apparmor.net/) is missing for full security. This is true if using normal Raspberyy OS cause the makers decided against it due to perfromance impacts.
+The Home Assistant system settings will report that [App Armor](https://www.apparmor.net/) is missing for full security. This is true if using normal Raspberry OS cause the makers decided against it due to performance impacts.
 The only way to use it for max security is to cross-compile the kernel - more details can be found [here](https://we.riseup.net/wikis/300095).
-Since my installation is not exposed outside the home network I decided against this. If anyone has some experience with it - please report back. 
+Since my installation is not exposed outside the home network I decided against this. If anyone has some experience with it - please report back.
+
+## Kiosk Mode
+For a real dashboard experience it's necessary to start the browser in **kiosk mode** (= no visible browser components) and as system service. These are the necessary steps for Chromium:
+
+- a startup script like [this](/kiosk_mode/startHomeDash.sh) (don't forget to make executable with `chmod u+x`)
+- auto-start this script as systemd service unit: 
+
+  `sudo nano /lib/systemd/system/homedash.service`  
+  ```
+  [Unit]
+  Description=SmartHome Dash
+  After=multi-user.target
+  
+  [Service]
+  Type=idle
+  User=pi
+  ExecStart=/home/pi/scripts/startHomeDash.sh
+  
+  [Install]
+  WantedBy=multi-user.target
+  ```
+- make it readable to others: `sudo chmod 644 /lib/systemd/system/homedash.service`
+- reload the daemon: `sudo systemctl daemon-reload`
+- enable the service: `sudo systemctl enable homedash.service`
+
+After that - start / restart / status of the service:
+  `systemctl start homedash.service` / `systemctl restart homedash.service` / `systemctl status homedash.service`
+  
+ 

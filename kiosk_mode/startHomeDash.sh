@@ -1,5 +1,5 @@
 #!/bin/sh
-#set -eu
+# set -euo pipefail
 
 xset -dpms     # disable DPMS (Energy Star) features.
 xset s off     # disable screen saver

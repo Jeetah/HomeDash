@@ -1,0 +1,8 @@
+- id: Morning_Briefing
+  alias: Morning Briefing
+  mode: single
+  trigger:
+    - platform: time
+      at: "07:00:00"
+  action:
+    - service: script.notify_morning_briefing

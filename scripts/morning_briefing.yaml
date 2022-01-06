@@ -1,0 +1,10 @@
+notify_morning_briefing:
+  sequence:
+    - service: notify.pushover
+      data:
+        title: "Morning Briefing"
+        message: >
+          Min Temp (24h): {{ states('sensor.stats_outdoor_temp_min') }}{{'\n'}}
+          Min Dach (24h): {{ states('sensor.stats_dach_temp_min') }}
+          Temp: {{ states('sensor.outdoor_temperature') }}
+          Rain: {{ states('sensor.event_rain_rate') }}

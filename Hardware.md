@@ -1,4 +1,12 @@
 # Hardware
+  * [Requirements](#requirements)
+  * [Display](#display)
+  * [Device](#device)
+    + [Case](#case)
+    + [Wall mount](#wall-mount)
+    + [Storage](#storage)
+    + [Final Result](#final-result)
+
 ## Requirements 
 **Use Case:** Central wall-mountable, energy-efficient, high-quality display. Flexible software options and remotely manageable device. Easy backup and reliable storage system.
 Only one power supply cord (no cable clutter).
@@ -10,6 +18,7 @@ This leads to...
 - not too big, not too small
 - screen should be only turned on when standing or waving in front of it
 - screen adapts to surrounding light
+- VESA mount
 - USB 3.0 port(s) incl power supply for device - even if in standby
 - enough room to attach the small device at the back
 
@@ -33,10 +42,17 @@ So all requirements above are fulfilled.
 Should be small and easily attachable to the display at the back. I chose this ultra-thin **[Geekworm case](https://geekworm.com/products/raspberry-pi-4-ultra-thin-cnc-aluminum-alloy-metal-case-compatible-with-raspberry-pi-4-model-b-only?_pos=32&_sid=ae360a17f&_ss=r)**
 and attached it with some good 3M velcro pads.
 
+### Wall mount
+There exist many VESA mountings - so I focused on small, easy to (un)install display and adjustable.
+A good and cheap one is [this one](https://smile.amazon.de/Hama-TV-Wandhalterung-Motion-neigbar-f%C3%BCr/dp/B008IBBY1M).
+There's enough room at the back, it can be adjusted slightly, has just one screw and the display is not too far away from the wall. 
+
 ### Storage
 I tried SD cards - but they all have sooner or later file system errors due to the many write operations which can be really nasty.
-So it's highly recommendable to use a SSD. And since space is scarce a M2 SSD is the way to go.
-I chose this **[FIDECO M.2 NVME SATA SSD case](https://smile.amazon.de/gp/product/B07TSBR114/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&psc=1)** cause the Realtek controller promises high-speed. And as SSD a standard cheap-but-not-crap M2 SSD like the **[Kingston M2 A400 series](https://www.kingston.com/germany/de/ssd/a400-solid-state-drive)**.
+So it's highly recommendable to use a SSD. Since space is scarce a M2 SSD is the way to go.
+I chose this **[FIDECO M.2 NVME SATA SSD case](https://smile.amazon.de/gp/product/B07TSBR114)** cause the Realtek controller promises high-speed. 
+And as SSD a standard cheap-but-not-crap M2 SSD like the **[Kingston M2 A400 series](https://www.kingston.com/germany/de/ssd/a400-solid-state-drive)**.
+The case can also be attached to the back of the display with velcro pads.
 
 Depending on the space the [Argon ONE M.2 case](https://www.argon40.com/argon-one-m-2-case-for-raspberry-pi-4.html) is also an option and gives you some further bonuses.
 

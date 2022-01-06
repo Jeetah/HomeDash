@@ -1,0 +1,46 @@
+weather_light_on:
+  sequence:
+    - variables:
+        temp: "{{ states('sensor.outdoor_temperature') }}"
+    - service: notify.notify
+      data:
+        message: >
+          {% if is_number(temp) and temp | float > -100 %}
+            {{ temp }}
+          {% endif %}
+    - alias: "Turn on weather light"
+      service: light.turn_on
+      target:
+        entity_id: light.terrasse
+      data:
+        brightness: 255
+        color_name: >
+          {% if is_number(temp) and temp | float > 30 %}
+            red
+          {% elif is_number(temp) and temp | float > 25 %}
+            orange
+          {% elif is_number(temp) and temp | float > 20 %}
+            sandybrown
+          {% elif is_number(temp) and temp | float > 15 %}
+            limegreen
+          {% elif is_number(temp) and temp | float > 10 %}
+            lightgreen
+          {% elif is_number(temp) and temp | float > 5 %}
+            darkturquoise
+          {% elif is_number(temp) and temp | float > 0 %}
+            deepskyblue
+          {% elif is_number(temp) and temp | float > -5 %}
+            skyblue
+          {% elif is_number(temp) and temp | float > -10 %}
+            white
+          {% endif %}
+        transition: 3
+
+weather_light_off:
+  sequence:
+    - alias: "Turn off weather light"
+      service: light.turn_off
+      target:
+        entity_id: light.terrasse
+      data:
+        transition: 2
