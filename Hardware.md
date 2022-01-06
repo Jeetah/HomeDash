@@ -39,6 +39,10 @@ So it's highly recommendable to use a SSD. And since space is scarce a M2 SSD is
 I chose this **[FIDECO M.2 NVME SATA SSD case](https://smile.amazon.de/gp/product/B07TSBR114/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&psc=1)** cause the Realtek controller promises high-speed. And as SSD a standard cheap-but-not-crap M2 SSD like the **[Kingston M2 A400 series](https://www.kingston.com/germany/de/ssd/a400-solid-state-drive)**.
 
 Depending on the space the [Argon ONE M.2 case](https://www.argon40.com/argon-one-m-2-case-for-raspberry-pi-4.html) is also an option and gives you some further bonuses.
+
+### Final Result
+The final result looks like this:
+![Back of display](/images/HomeDash_Back_Raspberry_M2SSD.jpeg)
   
 
 

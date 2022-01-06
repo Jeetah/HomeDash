@@ -6,6 +6,7 @@ visualizing stuff (= "HomeDash") on a central screen in the house.
 - [Hardware](Hardware.md)
 - [Setup](Setup.md)
 - [Recommendations](Recommendations.md)
+- [Good to know](GoodToKnow.md)
 
 ## Installation
 
