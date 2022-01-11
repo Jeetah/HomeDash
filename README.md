@@ -4,10 +4,13 @@ visualizing stuff (= "HomeDash") on a central screen in the house.
 
 ## Use Cases
 - ✅ Weather Light
+    - ⭕ consider wind/sun
 - ✅ Morning Briefing
-    - ⭕ Weather Forecast
-- ⭕️ Open window notifications
+    - ✅ Weather Forecast
+- ✅ Open window notifications
+    - ⭕ consider temp indoor/outside
 - ⭕ Long-time log weather data
+- ⭕ do more steps notification (depending on current steps aim)
 
 ## Prerequisites
 - [Hardware](Hardware.md)

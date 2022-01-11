@@ -4,7 +4,12 @@ notify_morning_briefing:
       data:
         title: "Morning Briefing"
         message: >
-          Min Temp (24h): {{ states('sensor.stats_outdoor_temp_min') }}{{'\n'}}
-          Min Dach (24h): {{ states('sensor.stats_dach_temp_min') }}
-          Temp: {{ states('sensor.outdoor_temperature') }}
-          Rain: {{ states('sensor.event_rain_rate') }}
+          Min Temp (24h): {{ states('sensor.stats_outdoor_temp_min') }}°{{'\n'}}
+          Min Dach (24h): {{ states('sensor.stats_dach_temp_min') }}°{{'\n'}}
+          Temp: {{ states('sensor.outdoor_temperature') }}°{{'\n'}}
+          Rain: {{ states('sensor.event_rain_rate') }} mm{{'\n'}}
+          --- Today ---{{'\n'}}
+          Temp:  {{ states('sensor.openweathermap_forecast_temperature_low') }}° / {{ states('sensor.openweathermap_forecast_temperature') }}°{{'\n'}}
+          Rain:  {{ states('sensor.openweathermap_forecast_precipitation') }} mm{{'\n'}} ({{ states('sensor.openweathermap_forecast_precipitation_probability') }}%)
+          Clouds:  {{ states('sensor.openweathermap_forecast_cloud_coverage') }}%{{'\n'}}
+          Wind: {{ states('sensor.openweathermap_forecast_wind_speed') }} m/s
