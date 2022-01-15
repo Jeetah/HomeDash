@@ -3,11 +3,11 @@ This repo is about running [HomeAssistant](https://www.home-assistant.io/) on a 
 visualizing stuff (= "HomeDash") on a central screen in the house.
 
 ## Use Cases
-- ✅ Weather Light
+- ✅ Weather Light: Colors show feel like temperature
     - ⭕ consider wind/sun
 - ✅ Morning Briefing
-    - ✅ Weather Forecast
-- ✅ Open window notifications
+    - ✅ Weather Forecast, current condition and own measured min/max values
+- ✅ Open window notifications 
     - ⭕ consider temp indoor/outside
 - ⭕ Long-time log weather data
 - ⭕ do more steps notification (depending on current steps aim)

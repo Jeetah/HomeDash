@@ -1,0 +1,9 @@
+- id: 'Open Window SZ'
+  alias: Open Window SZ
+  description: ''
+  use_blueprint:
+    path: open_window.yaml
+    input:
+      window_entity: binary_sensor.hmip_fenster_sz
+      time_duration: 00:20:00
+      window_name: Fenster SZ

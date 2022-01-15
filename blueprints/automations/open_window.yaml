@@ -1,0 +1,35 @@
+blueprint:
+  name: Open Window Warning
+  description: Warning about open windows depending on temp indoor & outdoor
+  domain: automation
+  input:
+    window_entity:
+      name: Window Entity
+      description: The window to be considered
+      selector:
+        entity:
+          domain: binary_sensor
+          device_class: door
+    time_duration:
+      name: Time in format e.g. 00:20:00
+      description: The time the window can be left open without warning
+    window_name:
+      name: Window Name
+
+variables:
+  window: !input window_name
+
+trigger:
+  - platform: state
+    entity_id: !input window_entity
+    to: "on"
+    for: !input time_duration
+
+action:
+  - condition: state
+    entity_id: !input window_entity
+    state: "on"
+  - service: notify.pushover
+    data:
+      title: "{{ window }} offen"
+      message: "{{ window }} offen seit 20min!"

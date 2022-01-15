@@ -12,3 +12,8 @@ Color outdoor light according to weather:
 Get data of interest each morning via Pushover:
 - [Automation](/automations/morning_briefing.yaml)
 - [Script](/scripts/morning_briefing.yaml)
+
+## Open Window Warning
+Get a notification if windows & doors are open too long: 
+- [Blueprint](/blueprints/automations/open_window.yaml)
+- [Usage](/automations/open_windows.yaml)

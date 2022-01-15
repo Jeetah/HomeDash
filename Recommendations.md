@@ -16,3 +16,10 @@ So for
 
 ### Structuring config files
 WIP
+
+### Blueprints
+Use blueprints as reusable scripting/automation blocks. 
+
+- Example for an automation blueprint (open window notification): 
+    - [Blueprint](/blueprints/automations/open_window.yaml)
+    - [Usage](/automations/open_windows.yaml)
