@@ -8,8 +8,7 @@
 If you use the backup via UI it is stored in `/usr/share/hassio/backup`. 
 
 So for 
-- manual backup to SD card (mounted in `/mnt/sdcard`) via rsync: 
-`sudo rsync -av --progress --mkpath /usr/share/hassio/backup "/mnt/sdcard/backups/hassio/backup"`
+- manual backup to SD card (mounted in `/mnt/sdcard`) via rsync (👉[script](/shell_scripts/backup2sdcard.sh))
 - automatic backup: tbd
 
 ## Configuration
