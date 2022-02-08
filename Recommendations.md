@@ -10,7 +10,7 @@ If you use the backup via UI it is stored in `/usr/share/hassio/backup`.
 So for 
 - manual backup to SD card (mounted in `/mnt/sdcard`) via rsync: 👉[script](/shell_scripts/backup2sdcard.sh)
     - **Tip:** Backup via UI after changes ('partial' with config files should be in most cases enough). Crontab the above script nightly like this:
-    `0 1 * * * bash /home/pi/HomeDash/shell_scripts/backup2sdcard.sh >> /home/pi/last_backup.log`
+    `0 1 * * * bash /home/pi/HomeDash/shell_scripts/backup2sdcard.sh >> /home/pi/last_hass_backup.log`
 - automatic backup: tbd
 
 ## Configuration
