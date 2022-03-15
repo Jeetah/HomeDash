@@ -11,6 +11,10 @@ visualizing stuff (= "HomeDash") on a central screen in the house.
     - [x] consider temp indoor/outside (room cooled down)
     - [x] notify at certain rain rate
     - [x] notify at certain wind speed/gust
+- [ ] Color-changing light animation if nobody in room
+- [x] Monitor Internet Connection
+    - [x] Local notification if gone
+    - [x] Notification if back again
 - [ ] Long-time log weather data
 - [x] do more steps notification (depending on current steps aim)
 

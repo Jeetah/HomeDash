@@ -2,6 +2,7 @@
 
   * [Installation Variants](#installation-variants)
   * [Raspberry](#raspberry)
+    + [Static IP](#Static-ip)
     + [Using a SSD instead SD card](#using-a-ssd-instead-sd-card)
     + [VNC](#vnc)
     + [Docker](#docker)
@@ -20,6 +21,9 @@ So the clear recommendation is to use the _supervised variant_ (which can btw al
 Just use the proven Raspberry imager with the standard OS to write the OS to the SD card.
 
 **ℹ️ Hint:** With _Ctrl+Shift+X_ you can make some settings like WiFi, SSH... directly in the imager. So no input devices are required for further setup after starting from the image!
+
+### Static IP
+I would highly recommend using a static IP address as described [here](https://pimylifeup.com/raspberry-pi-static-ip-address/). If using DHCP there is no guarantee that you get the same IP when binding to MAC address since this address is not stable when rebooting!
 
 ### Using a SSD instead SD card
 Boot from SD card, attach the M2 SSD case and:
